@@ -1,3 +1,5 @@
+// ESLint configuration inspired from the CodingLab Discord Bot project : https://github.com/codinglab-io/discord-bot
+
 import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import _import from "eslint-plugin-import";
