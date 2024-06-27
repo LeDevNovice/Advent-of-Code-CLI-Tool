@@ -1,3 +1,7 @@
 import { Command } from 'commander';
 
-export function registerCommands(program: Command): void {}
+import { createGetCommand } from './get';
+
+export function registerCommands(program: Command): void {
+  program.addCommand(createGetCommand());
+}
