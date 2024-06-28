@@ -1,9 +1,16 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
 import { promisify } from 'util';
 
-import { FetchOptions } from '../interfaces/fetchOptions.interface';
-import { ensureDirectoryExists } from '../utils/ensureDirectoryExists';
+import { FetchOptions } from '../../interfaces/fetchOptions.interface';
+import { ensureDirectoryExists } from '../../utils/ensureDirectoryExists';
+import { fetchInput } from './utils/fetchInput';
+
+dotenv.config({ path: path.resolve(__dirname, '../../../aoc-cli/.env') });
+
+const AOC_COOKIE = process.env.AOC_COOKIE;
 
 const writeFileAsync = promisify(fs.writeFile);
 
