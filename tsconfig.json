@@ -12,7 +12,7 @@
     "noUnusedParameters": true,
     "outDir": "./dist",
     "resolveJsonModule": true,
-    "noEmit": true,
+    "noEmit": false,
     "strict": true,
     "target": "ESNext",
     "useUnknownInCatchVariables": true
