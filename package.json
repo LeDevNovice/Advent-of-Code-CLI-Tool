@@ -15,6 +15,10 @@
     "format": "prettier --write \"src/*.ts\"",
     "lint": "eslint \"src/*.ts\" --fix"
   },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5"
+  },
   "devDependencies": {
     "@eslint/compat": "^1.1.0",
     "@eslint/eslintrc": "^3.1.0",
@@ -23,7 +27,6 @@
     "@types/node": "^20.14.8",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
-    "dotenv": "^16.4.5",
     "eslint": "^9.5.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-simple-import-sort": "^12.1.0",
@@ -47,8 +50,5 @@
       "ts",
       "js"
     ]
-  },
-  "dependencies": {
-    "commander": "^12.1.0"
   }
 }

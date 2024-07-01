@@ -8,9 +8,8 @@ export function createGetCommand(): Command {
   getCommand
     .command('input <yearDayPart> <destination>')
     .description('Get puzzle input for the specified year, day and part')
-    .action((yearDayPart: string, destination: string) => {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
-      getInput(yearDayPart, destination);
+    .action(async (yearDayPart: string, destination: string) => {
+      await getInput(yearDayPart, destination);
     });
 
   return getCommand;
