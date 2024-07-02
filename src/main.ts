@@ -2,7 +2,7 @@
 
 import { program } from 'commander';
 
-import { registerCommands } from './commands';
+import { registerCommands } from './commands/index';
 
 program.version('1.0.0');
 registerCommands(program);
