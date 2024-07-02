@@ -7,9 +7,7 @@ import { FetchOptions } from '../../interfaces/fetchOptions.interface';
 import { ensureDirectoryExists } from '../../utils/ensureDirectoryExists';
 import { fetchInput } from './utils/fetchInput';
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-
-dotenv.config({ path: path.resolve(__dirname, '../../../aoc-cli/.env') });
+dotenv.config();
 
 const AOC_COOKIE = process.env.AOC_COOKIE;
 
