@@ -4,6 +4,12 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "@commands/*": ["commands/*"],
+      "@services/*": ["services/*"],
+      "@interfaces/*": ["interfaces/*"],
+    },
     "outDir": "./dist",
     "strict": true,
     "skipLibCheck": true,

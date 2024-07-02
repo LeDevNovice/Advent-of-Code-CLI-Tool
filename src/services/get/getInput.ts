@@ -3,9 +3,9 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { promisify } from 'util';
 
-import { FetchOptions } from '../../interfaces/fetchOptions.interface';
+import { FetchOptions } from '@interfaces/fetchOptions.interface';
 import { ensureDirectoryExists } from '../../utils/ensureDirectoryExists';
-import { fetchInput } from './utils/fetchInput';
+import { fetchInput } from './fetchInput';
 
 dotenv.config();
 
