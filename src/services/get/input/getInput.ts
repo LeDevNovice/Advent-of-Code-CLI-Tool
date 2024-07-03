@@ -32,7 +32,7 @@ export async function getInput(yearDay: string, destination: string): Promise<vo
     await ensureDirectoryExists(destination);
     const input = await fetchInput(year, day, options);
     await fs.writeFile(inputPath, input);
-    console.log(`Input retieved and saved to ${inputPath}`);
+    console.log(`Input retrieved and saved to ${inputPath}`);
   } catch (error) {
     console.error('Error fetching or saving puzzle input : ', error);
   }
