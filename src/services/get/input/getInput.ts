@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv';
-import { promises as fs } from 'fs';
 import * as path from 'path';
+import { promises as fs } from 'fs';
 import { fileURLToPath } from 'url';
 
 import { FetchOptions } from '@interfaces/fetchOptions.interface';
@@ -10,7 +10,7 @@ import { fetchInput } from './fetchInput';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const envPath = path.resolve(__dirname, '../../../.env');
+const envPath = path.resolve(__dirname, '../../../../.env');
 dotenv.config({ path: envPath });
 
 const AOC_COOKIE = process.env.AOC_COOKIE;
@@ -26,7 +26,7 @@ export async function getInput(yearDay: string, destination: string): Promise<vo
     },
   };
 
-  console.log(`Fetching input for part puzzle day ${day} in ${year} version of Advent of Code...`);
+  console.log(`Fetching input for puzzle day ${day} in ${year} version of Advent of Code...`);
 
   try {
     await ensureDirectoryExists(destination);
