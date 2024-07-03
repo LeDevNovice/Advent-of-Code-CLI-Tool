@@ -8,8 +8,8 @@ export function createGetCommand(): Command {
   getCommand
     .command('input <yearDayPart> <destination>')
     .description('Get puzzle input for the specified year, day and part')
-    .action(async (yearDayPart: string, destination: string) => {
-      await getInput(yearDayPart, destination);
+    .action(async (yearDay: string, destination: string) => {
+      await getInput(yearDay, destination);
     });
 
   return getCommand;

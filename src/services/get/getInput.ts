@@ -15,8 +15,8 @@ dotenv.config({ path: envPath });
 
 const AOC_COOKIE = process.env.AOC_COOKIE;
 
-export async function getInput(yearDayPart: string, destination: string): Promise<void> {
-  const [year, day, part] = yearDayPart.split('-').map(Number);
+export async function getInput(yearDay: string, destination: string): Promise<void> {
+  const [year, day, part] = yearDay.split('-').map(Number);
   const inputPath = path.join(destination, 'input.md');
 
   const options: FetchOptions = {
@@ -26,9 +26,7 @@ export async function getInput(yearDayPart: string, destination: string): Promis
     },
   };
 
-  console.log(
-    `Fetching input for part ${part} of puzzle day ${day} in ${year} version of Advent of Code...`,
-  );
+  console.log(`Fetching input for part puzzle day ${day} in ${year} version of Advent of Code...`);
 
   try {
     await ensureDirectoryExists(destination);
