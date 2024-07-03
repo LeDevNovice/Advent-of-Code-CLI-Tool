@@ -1,6 +1,7 @@
 import { Command } from 'commander';
 
-import { getInput } from '@services/get/getInput';
+import { getInput } from '@services/get/input/getInput';
+import { getProblemStatement } from '@services/get/problemStatement/getProblemStatement';
 
 export function createGetCommand(): Command {
   const getCommand = new Command('get').description('Get various resources from Advent of Code');
