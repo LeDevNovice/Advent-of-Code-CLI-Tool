@@ -16,8 +16,6 @@ dotenv.config({ path: envPath });
 
 const AOC_COOKIE = process.env.AOC_COOKIE;
 
-console.debug(AOC_COOKIE);
-
 export async function getProblemStatement(yearDay: string, destination: string): Promise<void> {
   const [year, day] = yearDay.split('-').map(Number);
   const problemStatementPath = path.join(destination, 'problemStatement.md');
