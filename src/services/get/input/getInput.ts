@@ -16,7 +16,7 @@ dotenv.config({ path: envPath });
 const AOC_COOKIE = process.env.AOC_COOKIE;
 
 export async function getInput(yearDay: string, destination: string): Promise<void> {
-  const [year, day, part] = yearDay.split('-').map(Number);
+  const [year, day] = yearDay.split('-').map(Number);
   const inputPath = path.join(destination, 'input.md');
 
   const options: FetchOptions = {
