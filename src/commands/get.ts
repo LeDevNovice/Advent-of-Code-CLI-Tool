@@ -7,9 +7,16 @@ export function createGetCommand(): Command {
 
   getCommand
     .command('input <yearDay> <destination>')
-    .description('Get puzzle input for the specified year and day puzzle')
+    .description('Get input for the specified year and day puzzle')
     .action(async (yearDay: string, destination: string) => {
       await getInput(yearDay, destination);
+    });
+
+  getCommand
+    .command('problem <yearDay> <destination>')
+    .description('Get problem statement for the specified year and day puzzle')
+    .action(async (yearDay: string, destination: string) => {
+      await getProblemStatement(yearDay, destination);
     });
 
   return getCommand;
