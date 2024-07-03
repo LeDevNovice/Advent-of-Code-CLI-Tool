@@ -1,8 +1,7 @@
 import * as dotenv from 'dotenv';
-import * as fs from 'fs';
+import { promises as fs } from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { promisify } from 'util';
 
 import { FetchOptions } from '@interfaces/fetchOptions.interface';
 import { ensureDirectoryExists } from '../../utils/ensureDirectoryExists';
@@ -15,8 +14,6 @@ const envPath = path.resolve(__dirname, '../../../.env');
 dotenv.config({ path: envPath });
 
 const AOC_COOKIE = process.env.AOC_COOKIE;
-
-const writeFileAsync = promisify(fs.writeFile);
 
 export async function getInput(yearDayPart: string, destination: string): Promise<void> {
   const [year, day, part] = yearDayPart.split('-').map(Number);
@@ -36,7 +33,7 @@ export async function getInput(yearDayPart: string, destination: string): Promis
   try {
     await ensureDirectoryExists(destination);
     const input = await fetchInput(year, day, options);
-    await writeFileAsync(inputPath, input);
+    await fs.writeFile(inputPath, input);
     console.log(`Input retieved and saved to ${inputPath}`);
   } catch (error) {
     console.error('Error fetching or saving puzzle input : ', error);
