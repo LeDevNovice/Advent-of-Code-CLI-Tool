@@ -9,6 +9,7 @@
       "@commands/*": ["commands/*"],
       "@services/*": ["services/*"],
       "@interfaces/*": ["interfaces/*"],
+      "@utils/*": ["utils/*"],
     },
     "outDir": "./dist",
     "strict": true,

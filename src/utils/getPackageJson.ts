@@ -3,7 +3,6 @@ import * as path from 'path';
 import { fileURLToPath } from 'url';
 
 export function getPackageJsonPath(importMetaUrl: string): string {
-  console.debug(importMetaUrl);
   const __filename = fileURLToPath(importMetaUrl);
   const __dirname = path.dirname(__filename);
   return path.resolve(__dirname, './package.json');

@@ -4,7 +4,7 @@ import * as path from 'path';
 import { fileURLToPath } from 'url';
 
 import { FetchOptions } from '@interfaces/fetchOptions.interface';
-import { ensureDirectoryExists } from '../../utils/ensureDirectoryExists';
+import { ensureDirectoryExists } from '@utils/ensureDirectoryExists';
 import { fetchInput } from './fetchInput';
 
 const __filename = fileURLToPath(import.meta.url);
