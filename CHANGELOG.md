@@ -10,5 +10,6 @@
 ### Security
 -->
 
-## 0.1.0 - 24 Juin 2024
+## 1.0.0 - (To push to master)
+- Implement puzzle input retrievement cli command logic.
 
