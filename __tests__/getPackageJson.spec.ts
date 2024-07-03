@@ -24,7 +24,6 @@ describe('getPackageJsonPath', () => {
 
 describe('getPackageJson', () => {
   it('should read and parse package.json correctly', () => {
-    // Provide an absolute file URL path
     const mockImportMetaUrl = `file://${__filename}`;
     const mockPackageJson = { version: '1.0.0' };
     const mockPackageJsonPath = path.resolve(
@@ -41,7 +40,6 @@ describe('getPackageJson', () => {
   });
 
   it('should throw an error if package.json cannot be read', () => {
-    // Provide an absolute file URL path
     const mockImportMetaUrl = `file://${__filename}`;
     const mockPackageJsonPath = path.resolve(
       path.dirname(fileURLToPath(new URL(mockImportMetaUrl))),
