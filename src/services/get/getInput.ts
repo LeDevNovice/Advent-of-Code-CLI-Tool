@@ -1,13 +1,22 @@
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 import { promisify } from 'util';
 
 import { FetchOptions } from '@interfaces/fetchOptions.interface';
 import { ensureDirectoryExists } from '../../utils/ensureDirectoryExists';
 import { fetchInput } from './fetchInput';
 
-dotenv.config();
+// Convert import.meta.url to file path
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Determine the directory of the currently executing script
+const envPath = path.resolve(__dirname, '../../.env');
+
+// Load the .env file from the determined path
+dotenv.config({ path: envPath });
 
 const AOC_COOKIE = process.env.AOC_COOKIE;
 
