@@ -21,6 +21,10 @@ export function convertToMarkdown(html: string): string {
     .replace(/<\/code><\/pre>/g, '\n\n')
     .replace(/<a[^>]*href="([^"]*)"[^>]*>/g, '[$1](')
     .replace(/<\/a>/g, ')')
+    .replace(/<div>/g, '')
+    .replace(/<\/div>/g, '\n')
+    .replace(/<span>/g, '')
+    .replace(/<\/span>/g, '')
     .replace(/<[^>]*>/g, '');
 
   return markdown.trim();
