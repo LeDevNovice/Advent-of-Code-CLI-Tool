@@ -11,6 +11,8 @@
 -->
 
 ## 1.0.0 - (To push to master)
+### Added
 - Implement puzzle input retrievement cli command logic.
-- Implement puzzle problem statement retrievement cli command logic. 
+- Implement puzzle problem statement retrievement cli command logic.
+- Implement commands to retrieve all puzzle resources at the same time. 
 
