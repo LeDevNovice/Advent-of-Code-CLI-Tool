@@ -1,6 +1,7 @@
 import { Command } from 'commander';
+
 import { generateTemplate } from '@services/generate/generateTemplate';
-import { TemplateKey } from '../services/generate/templateKey.type';
+import { TemplateKey } from '@services/generate/templateKey.type';
 
 export function createGenerateCommand(): Command {
   const generateCommand = new Command('generate').description(
