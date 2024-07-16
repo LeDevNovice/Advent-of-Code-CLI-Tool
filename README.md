@@ -68,17 +68,14 @@ aoc get all 2023-01 ./2023/day1/resources
 ```
 ### Generate Command
 #### Generate Template
-Generates a solution template function in the specified programming language.
+Generates a solution template function in JavaScript.
 
 ```bash
-aoc generate template <destination> [options]
-
-Options:
---template <language>: Specify the template language (default: ts).
+aoc generate template <destination>
 ```
 Example
 ```bash
-aoc generate template ./solutions/day1 --template js
+aoc generate template ./solutions/day1
 ```
 
 ### Submit Command
