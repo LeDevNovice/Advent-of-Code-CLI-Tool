@@ -56,6 +56,9 @@
     "moduleFileExtensions": [
       "ts",
       "js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^@utils/(.*)$": "<rootDir>/src/utils/$1"
+    }
   }
 }
