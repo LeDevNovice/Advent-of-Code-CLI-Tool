@@ -1,5 +1,5 @@
 {
-  "name": "aoc-cli",
+  "name": "advent-of-code-cli-tool",
   "description": "cli program used to make Advent of Code challenge directly in VSCode and terminal",
   "author": "LeDevNovice",
   "version": "1.0.0",

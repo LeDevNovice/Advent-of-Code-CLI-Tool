@@ -10,7 +10,7 @@
 ### Security
 -->
 
-## 1.0.0 - (To push to master)
+## 1.0.0
 ### Added
 - Implement puzzle input retrievement cli command logic.
 - Implement puzzle problem statement retrievement cli command logic.
