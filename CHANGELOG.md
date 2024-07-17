@@ -10,7 +10,7 @@
 ### Security
 -->
 
-## 1.0.1 (To push to master)
+## 1.0.1
 ### Added
 - Test for the generate template function logic.
 
