@@ -2,7 +2,7 @@
   "name": "advent-of-code-cli-tool",
   "description": "cli program used to make Advent of Code challenge directly in VSCode and terminal",
   "author": "LeDevNovice",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "type": "module",
   "engines": {
@@ -56,6 +56,9 @@
     "moduleFileExtensions": [
       "ts",
       "js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^@utils/(.*)$": "<rootDir>/src/utils/$1"
+    }
   }
 }

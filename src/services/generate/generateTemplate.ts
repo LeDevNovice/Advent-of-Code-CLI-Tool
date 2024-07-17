@@ -2,13 +2,13 @@ import * as path from 'path';
 import { promises as fs } from 'fs';
 
 import { ensureDirectoryExists } from '@utils/ensureDirectoryExists';
-import { templates } from './templates';
-import { TemplateKey } from './templateKey.type';
 
-export async function generateTemplate(destination: string, template: TemplateKey): Promise<void> {
-  const templateContent = templates[template] || templates['ts'];
-  const fileExtension = template === 'js' ? 'js' : 'ts';
-  const fileName = `solvePuzzle.${fileExtension}`;
+export async function generateTemplate(destination: string): Promise<void> {
+  const templateContent = `export function solvePuzzle(input) {
+  // Implement your solution here
+  return;
+}`;
+  const fileName = 'solvePuzzle.js';
   const filePath = path.join(destination, fileName);
 
   try {
